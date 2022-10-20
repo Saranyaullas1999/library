@@ -8,7 +8,9 @@ import { BookentryComponent } from './bookentry/bookentry.component';
 import { RouterModule,Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { BookviewComponent } from './bookview/bookview.component';
-import{HttpClientModule} from '@angular/common/http'
+import{HttpClientModule} from '@angular/common/http';
+import { SearchbookComponent } from './searchbook/searchbook.component';
+
 
 
 
@@ -18,6 +20,9 @@ const appRoutes:Routes=[
   },
   {
     path:"view",component:BookviewComponent
+  },
+  {
+    path:"search",component:SearchbookComponent
   }
 ]
 @NgModule({
@@ -25,7 +30,8 @@ const appRoutes:Routes=[
     AppComponent,
     NavbarComponent,
     BookentryComponent,
-    BookviewComponent
+    BookviewComponent,
+    SearchbookComponent
   ],
   imports: [
     BrowserModule,
