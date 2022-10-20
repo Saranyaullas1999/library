@@ -20,6 +20,18 @@ export class BookviewComponent implements OnInit {
     )
   }
 
+  deleteBooks=(id:any)=>{
+    let data={
+      "id":id
+    }
+    this.myapi.deleteBook(data).subscribe(
+      (res)=>{
+        alert("Deleted")
+      }
+    )
+    this.fetchData()
+  }
+
 bookData:any=[]
 
   ngOnInit(): void {
