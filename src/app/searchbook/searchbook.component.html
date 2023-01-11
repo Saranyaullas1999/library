@@ -11,22 +11,25 @@
                     <button class="btn btn-success" (click)="readValue()">Search</button>
 
                 </div>
-               <div *ngFor="let i of data">
+               <div *ngFor="let i of data" class="row g-3">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="">Book Name :</label>
-                    <input type="text" class="form-control" value="{{i.name}}">
+                    <input type="text" class="form-control" value="{{i.name}}" [(ngModel)]="i.name">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="">Book Year :</label>
-                    <input type="text" class="form-control" value="{{i.year}}">
+                    <input type="text" class="form-control" value="{{i.year}}" [(ngModel)]="i.year">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="">Book Author :</label>
-                    <input type="text" class="form-control" value="{{i.author}}">
+                    <input type="text" class="form-control" value="{{i.author}}" [(ngModel)]="i.author">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="">Stock :</label>
-                    <input type="text" class="form-control" value="{{i.stock}}">
+                    <input type="text" class="form-control" value="{{i.stock}}" [(ngModel)]="i.stock">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button class="btn btn-success" (click)="updateBook()">Update</button>
                 </div>
                </div>
             </div>
